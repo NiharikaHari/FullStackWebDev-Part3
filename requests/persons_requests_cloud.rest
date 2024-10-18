@@ -1,0 +1,29 @@
+
+# get all persons
+GET https://fullstackwebdev-part3.onrender.com/api/persons
+
+###
+
+# get info
+GET https://fullstackwebdev-part3.onrender.com/info
+
+###
+
+# get person by id
+GET https://fullstackwebdev-part3.onrender.com/api/persons/2
+
+###
+
+# delete person by id
+DELETE https://fullstackwebdev-part3.onrender.com/api/persons/2
+
+###
+
+# add new person
+POST  https://fullstackwebdev-part3.onrender.com/api/persons
+content-type: application/json
+
+{
+    "name": "Harry Simons",
+    "number": "512-163-2815"
+}
