@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd D:\\Stuff\\Coding stuff\\FullstackWebDev\\part-2\\phonebook && npm run build && @powershell Copy-Item 'D:\\Stuff\\Coding stuff\\FullstackWebDev\\part-2\\phonebook\\dist\\' -Recurse 'D:\\Stuff\\Coding stuff\\FullstackWebDev\\part-3\\FullStackWebDev-Part3'",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "",
   "license": "ISC",
